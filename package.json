@@ -1,0 +1,19 @@
+{
+  "name": "peach-bookcases",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "workspaces": [
+    "back-end/*"
+  ],
+  "scripts": {
+    "start": "./node_modules/pm2/bin/pm2-runtime start ecosystem.config.js"
+  },
+  "devDependencies": {
+    "prettier": "^2.4.1"
+  },
+  "dependencies": {
+    "gatsby": "^3.14.2",
+    "pm2": "^5.1.2"
+  }
+}
