@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8" ><title>피치서가 라이브러리</title></head>
+<body>
+<script src="./pdf.js"></script>
+<script src="./pixi.js"></script>
+<style>
+    body,html {
+                margin: 0;
+                padding: 0;
+            }
+            @media print {
+                @page { size: A4 landscape; margin: 0;}
+        }
+    </style>
+</body>
+
+<script  src="./lib.js"
+ data-api-host-url="https://back-qa.peachseoga.com/peach"
+data-token-id="adminTokenId"
+data-s3-url-raw="https://peach-bookcases-raw-qa.s3.ap-northeast-2.amazonaws.com"
+data-s3-url-pub = "https://peach-bookcases-pub-qa.s3.ap-northeast-2.amazonaws.com"
+id="peach-bundle"
+
+></script>
+<!-- <input type="file"  id="pdf_upload"> -->
+
+<script>
+
+
+
+
+    // peach.admin( function(){
+    //     document.getElementById('pdf_upload').remove()
+    // })
+               peach.client(1034, false)
+            // peach.preview(1083)
+//    function b (){ 
+//        peach.setclose(()=>{
+//         document.body.removeChild(document.getElementById("printable"))
+//     document.body.removeChild(document.getElementById("canvas_wraper"))
+//            console.log('끝')
+//        })
+    //    var a = peach.peachSlide(
+    //        [
+    //         //    'https://peach-bookcases-raw-dev.s3.ap-northeast-2.amazonaws.com/86e2e588549c4211886d5c16479fb76f',
+    //         //    'https://peach-bookcases-raw-dev.s3.ap-northeast-2.amazonaws.com/3929511a22f04a588e121a293d71d436',
+    //         //    'https://peach-bookcases-raw-dev.s3.ap-northeast-2.amazonaws.com/403ef2ad1252429e8140c0e7755ab4cc',
+    //         //    'https://peach-bookcases-raw-dev.s3.ap-northeast-2.amazonaws.com/84431463b1a7445f8b7143fc72106162',
+    //         'https://peach-bookcases-raw-qa.s3.ap-northeast-2.amazonaws.com/9902129099ca4027b0ec3983a888b3ae',
+    //         'https://peach-bookcases-raw-qa.s3.ap-northeast-2.amazonaws.com/09e93f5ced2c4a089200c2e68461c2b0',
+    //         'https://peach-bookcases-raw-qa.s3.ap-northeast-2.amazonaws.com/5cb9881b685c482d85a6c3dee6dc52b9',
+    //         'https://peach-bookcases-raw-qa.s3.ap-northeast-2.amazonaws.com/97c86e423ac34cb4b21104bdae6dcad1',
+    //         'https://peach-bookcases-raw-qa.s3.ap-northeast-2.amazonaws.com/acf78a8c6a4b4dfc849ca98fb50aae81',
+    //         'https://peach-bookcases-raw-qa.s3.ap-northeast-2.amazonaws.com/203b0970b1f246b0ad187d3ee6c06a49'
+            
+    //         // 'https://peach-bookcases-raw-qa.s3.ap-northeast-2.amazonaws.com/858755a7eaaf4997b906e10734e3bd17'
+
+               
+    //        ],3 )
+    //        document.body.appendChild(a.view)
+    //        peach.edit(1083)
+    //        peach.preview(1015)
+    //        peach.preview(1083,'3015bee8098d4d4483c46b89cd11cf30')
+           
+    //    
+    //            let sampleclose = () =>{
+    //                    console.log('닫힘');
+    //                }
+    //                peach.setclose(sampleclose)
+//    } 
+        
+            </script>
+                <!-- <button onclick="b()">버튼을 눌러</button> -->
+    </html>

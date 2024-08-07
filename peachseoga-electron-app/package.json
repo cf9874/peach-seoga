@@ -1,0 +1,52 @@
+{
+  "name": "peachseoga",
+  "version": "1.0.0",
+  "description": "peachseoga desktop app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "deploy": "electron-builder --windows nsis:ia32",
+    "pack:win64": "electron-packager . peach_seoga-app --out=dist/win --platform=win32 --arch=x64 --overwrite --icon=assets/icons/win/icon.ico --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName='Electron Tutorial App'"
+  },
+  "build": {
+    "productName": "peach_seoga",
+    "appId": "com.peachseoga.app",
+    "asar": true,
+    "protocols": {
+      "name": "peachseoga",
+      "schemes": [
+        "peachseoga",
+        "installer"
+      ]
+    },
+    "win": {
+      "target": [
+        "zip",
+        "nsis"
+      ],
+      "icon": "assets/icons/win/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": false,
+      "include": "build/installer.nsh",
+      "perMachine": true
+    },
+    "directories": {
+      "buildResources": "./dist/installer/",
+      "output": "./exeResult/",
+      "app": "."
+    }
+  },
+  "author": "FGB",
+  "license": "MIT",
+  "devDependencies": {
+    "asar": "3.1.0",
+    "electron": "^20.1.1",
+    "electron-builder": "22.14.5",
+    "electron-packager": "15.4.0"
+  },
+  "dependencies": {
+    "@electron/remote": "^2.0.8"
+  }
+}

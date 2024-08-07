@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>헬로 월드!</title>
+    <script src="./path/to/jquery" onload="window.$ = window.jQuery = module.exports;"></script>
+  </head>
+  <body>
+    <script>
+      document.write(process.version);
+    </script>
+    , Chrome
+    <script>
+      document.write(process.versions.chrome);
+    </script>
+    , Electron
+    <script>
+      document.write(process.versions["electron"]);
+    </script>
+    을 사용합니다.
+  </body>
+</html>
